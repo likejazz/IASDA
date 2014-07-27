@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">IASDA</string>
+    <string name="title_section1">알베르토 콘타도르</string>
+    <string name="title_section2">마크 카벤디시</string>
+    <string name="title_section3">파비앙 칸첼라라</string>
+    <string name="title_section4">박상길</string>
+    <string name="navigation_drawer_open">네비게이션 열기</string>
+    <string name="navigation_drawer_close">네비게이션 닫기</string>
+    <string name="action_settings">Settings(Not Implemented)</string>
+    <string name="navigation_selected_msg">♥♡♥ 선수 입장 ♡♥♡</string>
+
+</resources>
