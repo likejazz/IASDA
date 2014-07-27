@@ -1,4 +1,4 @@
 IASDA
 =====
 
-IASDA: Android Navigation Drawer Example
+`IASDA` is Android navigation drawer example.
