@@ -1,6 +1,4 @@
 IASDA
 =====
 
-`IASDA` is android navigation drawer example.
-
-It has been implemented `SplashScreen`, `NavigationDrawer`, `DeepLinks`.
+This app describes how to implement `SplashScreen`, `NavigationDrawer` and `DeepLinks`.
