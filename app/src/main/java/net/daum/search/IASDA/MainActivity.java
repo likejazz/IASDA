@@ -47,19 +47,19 @@ public class MainActivity extends Activity
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
 
-        // if request is from Intent(deep link)
+        // if request is from intent://(deep link)
         Uri data = getIntent().getData();
         if (data != null) {
-            // URI에서 맨 마지막 값만 추출, 나중에 해당 drawer를 선택한다.
-            // 간단한 샘플 코드이므로 별도 예외 처리는 하지 않는다.
+            // extract drawer `position` from URI
+            // it does *NOT* implement exception handling because is very simple example.
             String pos = data.toString();
             pos = pos.substring(pos.length() - 1);
 
-            // Close the Navigation drawer.
+            // Close the Navigation drawer
             ((DrawerLayout) findViewById(R.id.drawer_layout))
                     .closeDrawer(mNavigationDrawerFragment.getActivity().
                             findViewById(R.id.navigation_drawer));
-            // drawer가 선택됐을때와 동일한 메소드를 수행한다.
+            // Do something like nav drawer has been selected
             onNavigationDrawerItemSelected(Integer.parseInt(pos) - 1);
         }
     }
@@ -186,13 +186,13 @@ public class MainActivity extends Activity
             // TextView
             ((TextView) rootView.findViewById(R.id.textView)).setText(title);
 
-            /*
-                ImageView
-
-                UrlImageViewHelper will automatically download and manage
-                all the web images and ImageViews.
-                https://github.com/koush/UrlImageViewHelper
-            */
+            /**
+             * ImageView
+             *
+             * UrlImageViewHelper will automatically download and manage
+             * all the web images and ImageViews.
+             * https://github.com/koush/UrlImageViewHelper
+             */
             UrlImageViewHelper.setUrlDrawable(
                     (ImageView) rootView.findViewById(R.id.imageView), src);
 

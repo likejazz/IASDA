@@ -22,15 +22,14 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     // You must install or update the Support Repository through the SDK manager to use this dependency.
-    // You must install or update the Support Repository through the SDK manager to use this dependency.
     compile 'com.android.support:support-v4:19.+'
     compile 'com.koushikdutta.urlimageviewhelper:urlimageviewhelper:1.0.4'
 }
 
 /**
- * 마지막 테스트를 위해 물리적인 디바이스 연결이 필요하다.
- * 그러나 Optimus G 가 USB 연결이 잘 안되어 USB Debugging이 쉽지 않았다.
- * apk를 빌드하고 Dropbox 계정에 바로 보내어 폰에서 다운받을 수 있게 구성했다.
+ * 최종 테스트를 위해 물리적인 디바이스 연결이 필요하다.
+ * 그러나 Optimus G가 USB 연결이 잘 되지않아 USB Debugging에 어려움이 있었다.
+ * 그래서 apk를 빌드하고 Dropbox 계정에 바로 보내어 폰에서 다운받을 수 있게 구성했다.
  */
 def homePath = System.properties['user.home']
 task(deploy) << {

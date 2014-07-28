@@ -50,14 +50,16 @@ public class SplashActivity extends Activity {
         // operations to prevent the jarring behavior of controls going away
         // while interacting with the UI.
 
-        /* New Handler to start the MainActivity
-         * and close this Splash-Screen after some seconds.*/
+        /**
+         * New Handler to start the MainActivity
+         * and close this Splash-Screen after some seconds.
+         */
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 // Create an Intent that will start the MainActivity.
-                Intent mainIntent = new Intent(SplashActivity.this, MainActivity.class);
-                SplashActivity.this.startActivity(mainIntent);
+                SplashActivity.this.startActivity(
+                        new Intent(SplashActivity.this, MainActivity.class));
                 SplashActivity.this.finish();
             }
         }, SPLASH_DISPLAY_MILLIS);
@@ -93,8 +95,7 @@ public class SplashActivity extends Activity {
     Runnable mHideRunnable = new Runnable() {
         @Override
         public void run() {
-            // don't hide status bar - commented
-            // mSystemUiHider.hide();
+            // do nothing
         }
     };
 
